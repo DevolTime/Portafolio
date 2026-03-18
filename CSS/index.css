@@ -44,3 +44,25 @@ img{
 .menu a:hover {
     opacity: .8;
 }
+
+.fote{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.menulate{
+    position: absolute;
+    display: flex;
+    right: 1.5rem;
+}
+
+
+footer{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
