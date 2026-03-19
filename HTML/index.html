@@ -10,62 +10,112 @@
 </head>
 
 <body>
-    <di class="foter">
-        <header>
-            <nav class="navbar">
-                <div class="logo">Devol <span>Time</span></div>
-                <ul class="menu">
-                    <li class="item"><a href="#home">Home</a></li>
-                    <li class="item"><a href="./about.html">About</a></li>
-                    <li class="item"><a href="./projects.html">Projects</a></li>
-                    <li class="item"><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Devol<span>Time</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero_content">
+                <div class="hero_text">
+                    <h1>DevolTime</h1>
+                    <h2>Desarrollador Web en ascenso</h2>
+                    <p>Apasionado por la programación y el desarrollo web, siempre buscando aprender cosas nuevas.
+                    </p>
+                    <div class="social_link">
+                        <a href="#" target="_blank"><img src="./../image/github-N.svg" alt="logo de github"></a>
+                        <a href="#" target="_blank"><img src="./../image/linkedin2.svg" alt="logo de linkedin"></a>
+                        <a href="#" target="_blank"></a><img src="./../image/gmail.svg" alt="logo de gmail"></a>
+                    </div>
+                    <a href="#contacto" class="btn">Contacto</a>
+                </div>
+                <div class="hero_image">
+                    <img src="../image/Kaede .png" alt="foto de perfil">
+                </div>
+            </div>
+        </section>
+        <section id="experiencia" class="experiencia">
+            <h2 class="titulo">Experiencia</h2>
+            <div class="timeline">
+                <div class="timeline_item">
+                    <div class="timeline_content">
+                        <span class="date">24 - 25</span>
+                        <h3>Tecnico en sistemas</h3>
+                        <h4>Clinica San Jose de Cúcuta</h4>
+                        <p>Mantenimiento de equipos de computo, instalación de software, configuración de redes, etc.</p>
+                        <ul class="skills">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projectos" class="projects">
+            <h2 class="section_title">Proyectos personales</h2>
+            <div class="projects-container">
+                <div class="projects_card">
+                    <div class="projects_img">
+                        <img src="./../image/Paginaweb.png" alt="logo de pagina web">
+                    </div>
+                    <div class="projects_info">
+                        <h3>Pagina web</h3>
+                        <p>Diseño y desarrollo de una pagina web con HTML, CSS y JavaScript</p>
+                        <div class="projects_tech">
+                            <spam>HTML</spam>
+                            <spam>CSS</spam>
+                            <spam>JavaScript</spam>
+                        </div>
+                        <div class="projects_links">
+                            <a href="#" target="_blank"><i><img src="" alt=""></i><img src="./../image/link.png"
+                                    alt="">Demo</a>
+                            <a href="#" target="_blank"><i><img src="" alt=""></i><img src="./../image/github-N.svg"
+                                    alt="">Código</a>
+                        </div>
+                    </div>
+                </div>
 
-        <main>
-            <section id="home" class="hero">
-                <div class="hero_content">
-                    <div class="hero_text">
-                        <h1>DevolTime</h1>
-                        <h2>Desarrollador Web en ascenso</h2>
-                        <p>Apasionado por la programación y el desarrollo web, siempre buscando aprender cosas nuevas.
-                        </p>
-                        <div class="social_link">
-                            <img src="./../image/github-N.svg" alt="logo de github">
-                            <img src="./../image/linkedin2.svg" alt="logo de linkedin">
-                            <img src="./../image/gmail.svg" alt="logo de gmail">
+                <div class="projects_card">
+                    <div class="projects_img">
+                        <img src="./../image/WebComdia.png" alt="logo de pagina web">
+                    </div>
+                    <div class="projects_info">
+                        <h3>Pagina web de comdia</h3>
+                        <p>Diseño de una tienda de comdia con HTML, CSS y JavaScript</p>
+                        <div class="projects_tech">
+                            <spam>HTML</spam>
+                            <spam>CSS</spam>
+                            <spam>JavaScript</spam>
                         </div>
-                    </div>
-                    <div class="photo">
-                        <img src="../image/Kaede .png" alt="foto de perfil">
-                    </div>
-                </div>
-            </section>
-            <section id="xp" class="experience">
-                <h2 class="titulo">Experiencia</h2>
-                <div class="timeline">
-                    <div class="timeline_item">
-                        <div class="timeline_content">
-                            <span class="date">24 - 25</span>
-                            <h3>Tecnico en sistemas</h3>
-                            <h4>Clinica San Jose de Cúcuta</h4>
-                            <p>Mantenimiento de equipos de computo, instalación de software, configuración de redes, etc.</p>
+                        <div class="projects_links">
+                            <a href="#" target="_blank"><i><img src="" alt=""></i><img src="./../image/link.png"
+                                    alt="">Demo</a>
+                            <a href="#" target="_blank"><i><img src="" alt=""></i><img src="./../image/github-N.svg"
+                                    alt="">Código</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="projects" class="projectos">
-                <h2>Proyectos personales</h2>
-                <div class="projects-container">
-                    <div class="projects_card">
-                        <div class="img_projects">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_content">
+            <p> &copy; 2026 Luis Camargo - Todos los derechos reservados</p>
+            <div class="social_link">
+                <a href="#" target="_blank"><img src="./../image/github-N.svg" alt="logo de github"></a>
+                <a href="#" target="_blank"><img src="./../image/linkedin2.svg" alt="logo de linkedin"></a>
+                <a href="#" target="_blank"></a><img src="./../image/gmail.svg" alt="logo de gmail"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
