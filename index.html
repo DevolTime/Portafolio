@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/721e976458.js" crossorigin="anonymous"></script>
     <link rel="icon" href="Img/Icon.png">
 </head>
 
@@ -27,7 +28,7 @@
         <section id="inicio" class="aboutme">
             <div class="About">
                 <div class="about_image">
-                    <img class="phto_img" src="Img/foto.jpg" alt="foto de perfil">
+                    <img class="photo_img" src="Img/foto.jpg" alt="foto de perfil">
                 </div>
                 <div class="about_text">
                     <h1>Luis <span>Camargo</span></h1>
@@ -37,16 +38,15 @@
 
                     <div class="btn_link">
                         <div class="social_link">
-                            <a href="#" target="_blank" class="img_link"><img src="Img/github.png" alt="logo de github"></a>
-                            <a href="#" target="_blank" class="img_link"><img src="Img/linkedin.png" alt="logo de linkedin"></a>
-                            <a href="#" target="_blank" class="img_link"><img src="Img/gmail.png" alt="logo de gmail"></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank"><i class="fa-solid fa-at"></i></a>
                         </div>
                         <button class="btn_contanct liquid"><span>Contacto</span></button>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <section class="projects">
             <div class="card">
@@ -55,42 +55,48 @@
                     <div class="projects-container">
                         <div class="projects_card">
                             <div class="projects_img">
-                                <img src="Img/Paginaweb.png" alt="logo de pagina web">
-                            </div>
-                            <div class="projects_info">
-                                <h3>Pagina web</h3>
-                                <p>Diseño y desarrollo de una pagina web con HTML, CSS y JavaScript</p>
-                                <div class="projects_tech">
-                                    <spam>HTML</spam>
-                                    <spam>CSS</spam>
-                                    <spam>JavaScript</spam>
-                                </div>
-                                <div class="projects_links">
-                                    <a href="#" target="_blank"><i><img src="" alt=""></i><img src="Img/link.png"
-                                            alt="">Demo</a>
-                                    <a href="#" target="_blank"><i><img src="" alt=""></i><img src="Img/github.png"
-                                            alt="">Código</a>
-                                </div>
-                            </div>
-                        </div>
+                                <img src="Img/Paginaweb.png" onclick="openModal(this)" class="preview" >
 
-                        <div class="proyects_card">
-                            <div class="projects_img">
-                                <img src="Img/Galeria.png" alt="logo de pagina web">
-                            </div>
-                            <div class="projects_info">
-                                <h3>Pagina web de comdia</h3>
-                                <p>Diseño de una tienda de comdia con HTML, CSS y JavaScript</p>
-                                <div class="projects_tech">
-                                    <spam>HTML</spam>
-                                    <spam>CSS</spam>
-                                    <spam>JavaScript</spam>
+                                <div class="projects_info">
+                                    <h3>Pagina web</h3>
+                                    <p>Diseño y desarrollo de una pagina web con HTML, CSS y JavaScript</p>
+                                    <div class="projects_tech">
+                                        <spam>HTML</spam>
+                                        <spam>CSS</spam>
+                                        <spam>JavaScript</spam>
+                                    </div>
+                                    <div class="projects_links_container">
+                                        <div class="projects_links">
+                                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="projects_links">
-                                    <a href="#" target="_blank"><i><img src="" alt=""></i><img src="Img/link.png"
-                                            alt="">Demo</a>
-                                    <a href="#" target="_blank"><i><img src="" alt=""></i><img src="Img/github.png"
-                                            alt="">Código</a>
+                            </div>
+
+                            <div class="proyects_card">
+                                <div class="projects_img">
+                                    <img src="Img/Galeria.png" onclick="openModal(this)" class="preview">
+
+                                    <div id="myModal" onclick="closeModal()">
+                                        <img id="imgModal" onclick="event.stopPropagation()">
+                                    </div>
+
+                                </div>
+                                <div class="projects_info">
+                                    <h3>Pagina web de comdia</h3>
+                                    <p>Diseño de una tienda de comdia con HTML, CSS y JavaScript</p>
+                                    <div class="projects_tech">
+                                        <spam>HTML</spam>
+                                        <spam>CSS</spam>
+                                        <spam>JavaScript</spam>
+                                    </div>
+                                    <div class="projects_links_container">
+                                        <div class="projects_links">
+                                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -131,28 +137,40 @@
 
     <footer>Copyright © 2026 DevolTime. All rights reserved.
         <div class="social_link">
-            <a href="#" target="_blank"><img src="Img/github.png" alt="logo de github"></a>
-            <a href="#" target="_blank"><img src="Img/linkedin.png" alt="logo de linkedin"></a>
-            <a href="#" target="_blank"><img src="Img/gmail.png" alt="logo de gmail"></a>
+            <a class="icon_link" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="icon_link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="icon_link" href="#" target="_blank"><i class="fa-solid fa-at"></i></a>
         </div>
+    </footer>
 
+    <script>
+        const words = ["Full-stack.", "Backend.", "Frontend."];
+        let i = 0;
+        const el = document.getElementById("about_text_animation");
 
-        <script>
-            const words = ["Full-stack.", "Backend.", "Frontend."];
-            let i = 0;
-            const el = document.getElementById("about_text_animation");
+        setInterval(() => {
+            el.classList.add("up");
+            setTimeout(() => {
+                i = (i + 1) % words.length;
+                el.textContent = words[i];
+                el.classList.remove("up");
+            }, 500);
+        }, 2000);
+    </script>
 
-            setInterval(() => {
-                el.classList.add("up");
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("imgModal");
 
-                setTimeout(() => {
-                    i = (i + 1) % words.length;
-                    el.textContent = words[i];
-                    el.classList.remove("up");
-                }, 500);
+            modal.style.display = "flex";
+            modalImg.src = element.src;
+        }
 
-            }, 2000);
-        </script>
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
