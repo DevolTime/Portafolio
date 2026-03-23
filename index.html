@@ -27,19 +27,22 @@
         <section id="inicio" class="aboutme">
             <div class="About">
                 <div class="about_image">
-                    <img src="Img/foto.jpg" alt="foto de perfil">
+                    <img class="phto_img" src="Img/foto.jpg" alt="foto de perfil">
                 </div>
                 <div class="about_text">
                     <h1>Luis <span>Camargo</span></h1>
-                    <h2>Desarrollador Web full stack en ascenso</h2>
+                    <h2 class="frase">Desarrollador Web <span id="about_text_animation" class="text_animation">Full
+                            stack</span></h2>
                     <p>Apasionado por la programación y el desarrollo web, siempre buscando aprender cosas nuevas.</p>
 
-                    <div class="social_link">
-                        <a href="#" target="_blank"><img src="Img/github.png" alt="logo de github"></a>
-                        <a href="#" target="_blank"><img src="Img/linkedin.png" alt="logo de linkedin"></a>
-                        <a href="#" target="_blank"><img src="Img/gmail.png" alt="logo de gmail"></a>
+                    <div class="btn_link">
+                        <div class="social_link">
+                            <a href="#" target="_blank" class="img_link"><img src="Img/github.png" alt="logo de github"></a>
+                            <a href="#" target="_blank" class="img_link"><img src="Img/linkedin.png" alt="logo de linkedin"></a>
+                            <a href="#" target="_blank" class="img_link"><img src="Img/gmail.png" alt="logo de gmail"></a>
+                        </div>
+                        <button class="btn_contanct liquid"><span>Contacto</span></button>
                     </div>
-                    <a href="#contacto" class="btn">Contacto</a>
                 </div>
             </div>
         </section>
@@ -132,6 +135,24 @@
             <a href="#" target="_blank"><img src="Img/linkedin.png" alt="logo de linkedin"></a>
             <a href="#" target="_blank"><img src="Img/gmail.png" alt="logo de gmail"></a>
         </div>
+
+
+        <script>
+            const words = ["Full-stack.", "Backend.", "Frontend."];
+            let i = 0;
+            const el = document.getElementById("about_text_animation");
+
+            setInterval(() => {
+                el.classList.add("up");
+
+                setTimeout(() => {
+                    i = (i + 1) % words.length;
+                    el.textContent = words[i];
+                    el.classList.remove("up");
+                }, 500);
+
+            }, 2000);
+        </script>
 </body>
 
 </html>
