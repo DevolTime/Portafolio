@@ -38,6 +38,10 @@ header {
     margin-top: 60px;
 }
 
+section {
+    scroll-margin-top: 65px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
