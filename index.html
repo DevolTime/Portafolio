@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="Animation.js"></script>
     <script src="https://kit.fontawesome.com/721e976458.js" crossorigin="anonymous"></script>
     <link rel="icon" href="Img/Icon.png">
 </head>
@@ -13,13 +14,13 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Devol<span>Time</span></div>
+            <div class="logo" id="logo1"><span>Devol</span>Time</div>
             <ul class="nav_links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Educación</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#inicio">Sobre mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#inicio">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -38,9 +39,9 @@
 
                     <div class="btn_link">
                         <div class="social_link">
-                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" target="_blank"><i class="fa-solid fa-at"></i></a>
+                            <a href="https://github.com/DevolTime" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="yefriathertua@gmail.com" target="_blank"><i class="fa-solid fa-at"></i></a>
                         </div>
                         <button class="btn_contanct liquid"><span>Contacto</span></button>
                     </div>
@@ -70,8 +71,8 @@
                                     </div>
                                     <div class="projects_links_container">
                                         <div class="projects_links">
-                                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
-                                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                            <a href="https://devoltime.github.io/Paginaweb/index.html" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
                                         </div>
                                     </div>
                                 </div>
@@ -92,8 +93,8 @@
                                     </div>
                                     <div class="projects_links_container">
                                         <div class="projects_links">
-                                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
-                                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                            <a href="https://devoltime.github.io/Paginaweb/galeria.html" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
                                         </div>
                                     </div>
                                 </div>
@@ -119,10 +120,12 @@
                         <div class="study-container">
                             <div class="study_card">
                                 <div class="study_img">
-                                    <img src="Img/Bit.webp" alt="logo de curso"></div>
+                                    <img src="Img/Bit.webp" alt="logo de curso">
+                                </div>
                                 <div class="study_info">
                                     <h3>Desarrollo Web Full Stack</h3>
-                                    <p class="study_description">Desarrollo web full stack con HTML, CSS y JavaScript</p>
+                                    <p class="study_description">Desarrollo web full stack con HTML, CSS y JavaScript
+                                    </p>
                                     <span class="study_date">2026 - Actualidad</span>
                                     <div class="study_links">
                                     </div>
@@ -131,7 +134,8 @@
 
                             <div class="study_card">
                                 <div class="study_img">
-                                    <img src="#" alt=""></div>
+                                    <img src="#" alt="">
+                                </div>
                                 <div class="study_info">
                                     <h3>Tecnico en Sistemas</h3>
                                     <p class="study_description">Mantenimiento de sistemas de computo</p>
@@ -143,10 +147,12 @@
 
                             <div class="study_card">
                                 <div class="study_img">
-                                    <img src="Img/platzi.svg" alt=""></div>
+                                    <img src="Img/platzi.svg" alt="">
+                                </div>
                                 <div class="study_info">
                                     <h3>Fundamentos del Desarrollo Web Profesional</h3>
-                                    <p class="study_description">Fundamentes del desarrollo web profesional con HTML, CSS y JavaScript</p>
+                                    <p class="study_description">Fundamentes del desarrollo web profesional con HTML,
+                                        CSS y JavaScript</p>
                                     <span class="study_date">2026 - Actualidad</span>
                                     <div class="study_links">
                                     </div>
@@ -195,6 +201,32 @@
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
+    </script>
+
+    <script>
+        const palabra = document.getElementById("logo1");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 60) {
+                palabra.style.opacity = "0";
+            } else {
+                palabra.style.opacity = "1";
+            }
+        });
+    </script>
+
+
+
+    <script>
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('active');
+            } else {
+                navbar.classList.remove('active');
+            }
+        });
     </script>
 </body>
 
