@@ -20,7 +20,7 @@
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#estudios">Estudios</a></li>
-                <li><a href="#inicio">Contacto</a></li>
+                <!-- <li><a href="#inicio" >Contacto</a></li> -->
             </ul>
         </nav>
     </header>
@@ -39,11 +39,38 @@
 
                     <div class="btn_link">
                         <div class="social_link">
-                            <a href="https://github.com/DevolTime" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="yefriathertua@gmail.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+                            <a href="https://github.com/DevolTime" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a><i class="fa-solid fa-at" id="copyEmailBtn"></i></a>
+                            <div id="notification" class="hidden">¡Correo copiado!</div>
                         </div>
-                        <button class="btn_contanct liquid"><span>Contacto</span></button>
+                        <button class="btn_contanct liquid" id="contactButton"><span>Contacto</span></button>
+                        <div id="contactForm" class="hidden">
+                            <form action="https://formspree.io/f/xwvrbygn" method="POST">
+                                <h2>Formulario de contacto</h2>
+
+                                <label for="name">Nombre:</label><br>
+                                <input type="text" id="name" name="name" required><br><br>
+
+                                <label for="subject">Asunto:</label><br>
+                                <input type="text" id="subject" name="subject" required><br><br>
+
+                                <label for="email">Correo:</label><br>
+                                <input type="email" id="email" name="email" required><br><br>
+
+                                <label for="message">Mensaje:</label><br>
+                                <textarea id="message" name="message" required></textarea><br><br>
+
+                                <button type="submit">Enviar</button>
+                                <button type="button" id="closeForm">Cerrar</button>
+                            </form>
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -71,8 +98,10 @@
                                     </div>
                                     <div class="projects_links_container">
                                         <div class="projects_links">
-                                            <a href="https://devoltime.github.io/Paginaweb/index.html" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
-                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                            <a href="https://devoltime.github.io/Paginaweb/index.html"
+                                                target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i
+                                                    class="fa-brands fa-github"></i>Código</a>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +122,10 @@
                                     </div>
                                     <div class="projects_links_container">
                                         <div class="projects_links">
-                                            <a href="https://devoltime.github.io/Paginaweb/galeria.html" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
-                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i class="fa-brands fa-github"></i>Código</a>
+                                            <a href="https://devoltime.github.io/Paginaweb/galeria.html"
+                                                target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                                            <a href="https://github.com/DevolTime/Paginaweb" target="_blank"><i
+                                                    class="fa-brands fa-github"></i>Código</a>
                                         </div>
                                     </div>
                                 </div>
@@ -167,12 +198,30 @@
 
     <footer>
         <div class="social_link footer_links">
-            <a class="icon_link" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a class="icon_link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a class="icon_link" href="#" target="_blank"><i class="fa-solid fa-at"></i></a>
+            <a href="https://github.com/DevolTime" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-solid fa-at" id="copyEmailBtn1"></i></a>
+        </div>
         </div>
         <p>Copyright © 2026 DevolTime. All rights reserved.</p>
     </footer>
+
+    <script>
+        const contactButton = document.getElementById("contactButton");
+        const contactForm = document.getElementById("contactForm");
+        const closeForm = document.getElementById("closeForm");
+
+        // Mostrar formulario al hacer clic en el botón
+        contactButton.addEventListener("click", () => {
+            contactForm.classList.remove("hidden");
+        });
+
+        // Ocultar formulario al hacer clic en "Cerrar"
+        closeForm.addEventListener("click", () => {
+            contactForm.classList.add("hidden");
+        });
+    </script>
 
     <script>
         const words = ["Full-stack.", "Backend.", "Frontend."];
@@ -215,7 +264,18 @@
         });
     </script>
 
+    <!-- <script>
+        const email = "yefriathertua@gmail.com";
+        const btn = document.getElementById("copyEmailBtn");
 
+        btn.addEventListener("click", () => {
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Correo copiado: " + email);
+            }).catch(err => {
+                console.error("Error al copiar: ", err);
+            });
+        });
+    </script> -->
 
     <script>
         const navbar = document.querySelector('.navbar');
@@ -226,6 +286,25 @@
             } else {
                 navbar.classList.remove('active');
             }
+        });
+    </script>
+
+
+    <script>
+        const email = "yefriathertua@gmail.com";
+        const btn = document.getElementById("copyEmailBtn");
+        const notification = document.getElementById("notification");
+
+        btn.addEventListener("click", () => {
+            navigator.clipboard.writeText(email).then(() => {
+                notification.classList.remove("hidden");
+                notification.classList.add("show");
+
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                    notification.classList.add("hidden");
+                }, 1000);
+            });
         });
     </script>
 </body>
