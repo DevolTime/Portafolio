@@ -208,7 +208,7 @@ header {
     margin-bottom: 5rem;
 }
 
-.studies_img {
+.study_img {
     width: 200px;
     height: 200px;
 }
@@ -347,7 +347,7 @@ header {
     transform: translateY(-10px);
 }
 
-.title_studies{
+.title_study {
     display: flex;
     justify-content: center;
     color: var(--light-text);
@@ -356,16 +356,59 @@ header {
     margin-bottom: 5rem;
 }
 
-.studies_card{
+.study-container {
     display: flex;
     justify-content: center;
+    gap: 8rem;
+    margin-bottom: 5rem;
+}
+.study_card {
+    width: 280px;
+    padding: 2rem;
+    border-radius: 15px;
+    background: var(--card-bg);
     color: var(--light-text);
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.studies_img {
-    width: 80px;
-    height: 80px;
+/* Icono */
+.study_img {
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     margin-bottom: 1rem;
+    display: flex;
+}
+
+.study_img img {
+    border-radius: 50%;
+}
+
+/* Título */
+.study_card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Descripción */
+.study_description {
+    font-size: 1.3rem;
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Fecha */
+.study_date {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Hover 🔥 */
+.study_card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(99, 115, 255, 0.3);
 }
