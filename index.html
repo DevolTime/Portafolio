@@ -51,11 +51,14 @@
         <section class="projects">
             <div class="card">
                 <section id="proyectos" class="projects">
-                    <h2 class="section_title">Proyectos personales</h2>
+                    <h2 class="title_projects">Proyectos personales</h2>
                     <div class="projects-container">
                         <div class="projects_card">
                             <div class="projects_img">
-                                <img src="Img/Paginaweb.png" onclick="openModal(this)" class="preview" >
+                                <img src="Img/Paginaweb.png" onclick="openModal(this)" class="preview">
+                                <div id="myModal" onclick="closeModal()">
+                                    <img id="imgModal" onclick="event.stopPropagation()">
+                                </div>
 
                                 <div class="projects_info">
                                     <h3>Pagina web</h3>
@@ -73,19 +76,15 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="proyects_card">
-                                <div class="projects_img">
-                                    <img src="Img/Galeria.png" onclick="openModal(this)" class="preview">
+                        <div class="projects_card">
+                            <div class="projects_img">
+                                <img src="Img/Galeria.png" onclick="openModal(this)" class="preview">
 
-                                    <div id="myModal" onclick="closeModal()">
-                                        <img id="imgModal" onclick="event.stopPropagation()">
-                                    </div>
-
-                                </div>
                                 <div class="projects_info">
-                                    <h3>Pagina web de comdia</h3>
-                                    <p>Diseño de una tienda de comdia con HTML, CSS y JavaScript</p>
+                                    <h3>Galeria</h3>
+                                    <p>Diseño de una galería de fotos con HTML, CSS y JavaScript</p>
                                     <div class="projects_tech">
                                         <spam>HTML</spam>
                                         <spam>CSS</spam>
@@ -100,12 +99,13 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
 
                 <section class="skills" id="habilidades">
-                    <h2 class="section_title">Habilidades</h2>
+                    <h2 class="title_skills">Habilidades</h2>
                     <div class="logo_skills">
                         <img src="Img/html.png" alt="logo de HTML">
                         <img src="Img/css.png" alt="logo de CSS">
@@ -114,7 +114,7 @@
                 </section>
 
                 <section class="studies" id="estudios">
-                    <h2 class="section_title">Estudios</h2>
+                    <h2 class="title_studies">Estudios</h2>
                     <div class="studies-container">
                         <div class="studies_card">
                             <div class="studies_img">
