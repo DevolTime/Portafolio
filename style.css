@@ -251,7 +251,7 @@ header {
     overflow: visible;
 }
 
-.projects_img{
+.projects_img {
     border-radius: 20px;
     background-color: var(--dark-bg);
     color: var(--light-text);
@@ -264,7 +264,7 @@ header {
     box-shadow: 0 0 10px #6373ffbd;
 }
 
-.projects_info{
+.projects_info {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -283,15 +283,15 @@ header {
     margin-bottom: 1rem;
 }
 
-.projects_tech{
+.projects_tech {
     display: flex;
     gap: 1rem;
     font-size: 1.5rem;
 }
 
-.projects_tech spam{
+.projects_tech spam {
     color: var(--color-primary);
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .preview {
@@ -330,11 +330,42 @@ header {
     margin-top: 5rem;
 }
 
-.logo_skills{
-    display: flex; 
+.logo_skills {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     margin-top: 5rem;
+    gap: 2rem;
 }
 
+.link_skills {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.link_skills:hover {
+    filter: brightness(1.2) contrast(1.1);
+    transform: translateY(-10px);
+}
+
+.title_studies{
+    display: flex;
+    justify-content: center;
+    color: var(--light-text);
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.studies_card{
+    display: flex;
+    justify-content: center;
+    color: var(--light-text);
+    flex-wrap: wrap;
+}
+
+.studies_img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
