@@ -508,25 +508,22 @@ section {
     box-shadow: 0 15px 30px rgba(99, 115, 255, 0.3);
 }
 
-footer {
+
+.info_footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.6rem;
-    position: relative;
-    padding: .8% 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social_link.footer_links {
+    margin: 0;
 }
 
 footer p {
     color: var(--gray-text);
-
-}
-
-.footer_links {
-    position: absolute;
-    top: .5rem;
-    right: 59%;
+    font-size: 1.6rem;
 }
 
 @media (max-width: 768px) {
@@ -590,14 +587,6 @@ footer p {
         width: 90%;
     }
 
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer_links {
-        position: static;
-    }
 }
 
 @media (max-width: 480px) {
