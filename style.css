@@ -140,6 +140,7 @@ section {
 
 .frase {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     gap: 6px;
@@ -592,6 +593,13 @@ footer p {
 
     .study_card {
         width: 90%;
+    }
+
+    .frase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
 
 }
