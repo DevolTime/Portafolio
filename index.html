@@ -36,42 +36,34 @@
                     <h2 class="frase">Desarrollador Web <span id="about_text_animation" class="text_animation">Full
                             stack</span></h2>
                     <p>Apasionado por la programación y el desarrollo web, siempre buscando aprender cosas nuevas.</p>
-
-                    <div class="btn_link">
-                        <div class="social_link">
-                            <a href="https://github.com/DevolTime" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                            <a href=""><i class="fa-solid fa-at" id="copyEmailBtn"></i></a>
-                            <div id="notification" class="hidden">¡Correo copiado!</div>
+                    <section class="link_btn">
+                        <div class="btn_link" >
+                            <div class="social_link">
+                                <a href="https://github.com/DevolTime" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/luiscamargo2/" target="_blank"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href=""><i class="fa-solid fa-at" id="copyEmailBtn"></i></a>
+                                <div id="notification" class="hidden">¡Correo copiado!</div>
+                            </div>
+                            <button class="btn_contanct liquid" id="contactButton"><span>Contacto</span></button>
+                            <div id="contactForm" class="hidden">
+                                <form action="https://formspree.io/f/xwvrbygn" method="POST">
+                                    <h2>Formulario de contacto</h2>
+                                    <label for="name">Nombre:</label><br>
+                                    <input type="text" id="name" name="name" required><br><br>
+                                    <label for="subject">Asunto:</label><br>
+                                    <input type="text" id="subject" name="subject" required><br><br>
+                                    <label for="email">Correo:</label><br>
+                                    <input type="email" id="email" name="email" required><br><br>
+                                    <label for="message">Mensaje:</label><br>
+                                    <textarea id="message" name="message" required></textarea><br><br>
+                                    <button type="submit">Enviar</button>
+                                    <button type="button" id="closeForm">Cerrar</button>
+                                </form>
+                            </div>
                         </div>
-                        <button class="btn_contanct liquid" id="contactButton"><span>Contacto</span></button>
-                        <div id="contactForm" class="hidden">
-                            <form action="https://formspree.io/f/xwvrbygn" method="POST">
-                                <h2>Formulario de contacto</h2>
-
-                                <label for="name">Nombre:</label><br>
-                                <input type="text" id="name" name="name" required><br><br>
-
-                                <label for="subject">Asunto:</label><br>
-                                <input type="text" id="subject" name="subject" required><br><br>
-
-                                <label for="email">Correo:</label><br>
-                                <input type="email" id="email" name="email" required><br><br>
-
-                                <label for="message">Mensaje:</label><br>
-                                <textarea id="message" name="message" required></textarea><br><br>
-
-                                <button type="submit">Enviar</button>
-                                <button type="button" id="closeForm">Cerrar</button>
-                            </form>
-                        </div>
-
-
-
-
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>
@@ -169,7 +161,8 @@
                                 </div>
                                 <div class="study_info">
                                     <h3>Tecnico en Sistemas</h3>
-                                    <p class="study_description">Mantenimiento de sistemas de computo y programación.</p>
+                                    <p class="study_description">Mantenimiento de sistemas de computo y programación.
+                                    </p>
                                     <span class="study_date">2024 - 2025</span>
                                     <div class="study_links">
                                     </div>
@@ -210,12 +203,10 @@
         const contactButton = document.getElementById("contactButton");
         const contactForm = document.getElementById("contactForm");
         const closeForm = document.getElementById("closeForm");
-
         // Mostrar formulario al hacer clic en el botón
         contactButton.addEventListener("click", () => {
             contactForm.classList.remove("hidden");
         });
-
         // Ocultar formulario al hacer clic en "Cerrar"
         closeForm.addEventListener("click", () => {
             contactForm.classList.add("hidden");
@@ -226,7 +217,6 @@
         const words = ["Full-stack.", "Backend.", "Frontend."];
         let i = 0;
         const el = document.getElementById("about_text_animation");
-
         setInterval(() => {
             el.classList.add("up");
             setTimeout(() => {
@@ -241,32 +231,18 @@
         function openModal(element) {
             const modal = document.getElementById("myModal");
             const modalImg = document.getElementById("imgModal");
-
             modal.style.display = "flex";
             modalImg.src = element.src;
         }
-
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
     </script>
 
-    <script>
-        const palabra = document.getElementById("logo1");
-
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 60) {
-                palabra.style.display = "none";
-            } else {
-                palabra.style.display = "block";
-            }
-        });
-    </script>
 
     <!-- <script>
         const email = "yefriathertua@gmail.com";
         const btn = document.getElementById("copyEmailBtn");
-
         btn.addEventListener("click", () => {
             navigator.clipboard.writeText(email).then(() => {
                 alert("Correo copiado: " + email);
@@ -278,7 +254,6 @@
 
     <script>
         const navbar = document.querySelector('.navbar');
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 60) {
                 navbar.classList.add('active');
