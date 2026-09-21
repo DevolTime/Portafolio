@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Mapeo de Entradas y Salidas */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Entorno e Interoperabilidad Node.js */
+    "module": "nodenext",
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+    "esModuleInterop": true,
+
+    /* Tipado Estricto */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Opciones recomendadas */
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
